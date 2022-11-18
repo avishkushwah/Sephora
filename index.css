@@ -1,0 +1,22 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+footer{
+    width: 100%;
+}
+
+.first_footer{
+    background-color: #f3f3f3;
+}
+
+.first_footer_main{
+    width: 93%;
+    margin: auto;
+}
+
+.img img{
+    width:110px;
+}
+
