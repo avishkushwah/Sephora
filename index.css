@@ -14,9 +14,55 @@ footer{
 .first_footer_main{
     width: 93%;
     margin: auto;
+    display: flex;
 }
 
 .img img{
     width:110px;
 }
 
+.vr{
+    width: 2px;
+    height: 20px;
+    background-color: rgb(187, 178, 178);
+    margin: 12px 20px;
+}
+
+.apps{
+    display: flex;
+    padding: 15px 10px;
+    
+}
+
+.apps>i{
+    color: rgb(226, 68, 94);
+}
+
+.apps>h3{
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Play', sans-serif;
+    margin-left: 10px;
+    margin-top: -2px;
+}
+
+.stars{
+    padding: 12px 20px;
+}
+
+.stars>i{
+    transform: rotate(-45deg);
+    font-size: 14px;
+}
+
+#purple_star{
+    color: purple;
+}
+
+#yellow_star{
+    color: yellow;
+}
+#pink_star{
+    color: #EA047E;
+}
