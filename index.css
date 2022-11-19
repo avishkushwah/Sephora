@@ -66,3 +66,10 @@ footer{
 #pink_star{
     color: #EA047E;
 }
+
+.head_center{
+    font-family: 'Play', sans-serif;
+    padding: 10px 10px;
+    width: 400px;
+    text-align: center;
+}
