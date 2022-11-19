@@ -25,30 +25,31 @@ footer{
     width: 2px;
     height: 20px;
     background-color: rgb(187, 178, 178);
-    margin: 12px 20px;
+    margin: 14px 20px;
 }
 
-.apps{
+.apps>a{
     display: flex;
-    padding: 15px 10px;
-    
+    padding: 15px 5px;
+    text-decoration: none;
+    font-family: 'Play', sans-serif;
 }
 
-.apps>i{
+.apps>a>i{
     color: rgb(226, 68, 94);
 }
 
-.apps>h3{
-    letter-spacing: 1px;
+.apps>a>h3{
     font-weight: 400;
     font-size: 16px;
     font-family: 'Play', sans-serif;
     margin-left: 10px;
     margin-top: -2px;
+    color: rgb(87, 76, 76);
 }
 
 .stars{
-    padding: 12px 20px;
+    padding: 12px 10px;
 }
 
 .stars>i{
@@ -69,7 +70,7 @@ footer{
 
 .head_center{
     font-family: 'Play', sans-serif;
-    padding: 10px 10px;
+    padding: 10px 5px;
     width: 400px;
     text-align: center;
 }
