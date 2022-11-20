@@ -140,15 +140,13 @@ footer{
     font-weight: 600;
 }
 
-.nav_links li:hover{
-    color: #EA047E;
-}
-
-.nav_links ul ul {
+#pop {
     position: absolute;
 	display: none;
 	background-color: #222;
+    font-family: 'Play', sans-serif;
 	top: 190px;
+    color: white;
 	text-align: left;
     left: 0px;
     width: 100%;
@@ -156,31 +154,8 @@ footer{
     
 }
 
-.nav_links ul li:hover>ul  {
+.nav_links>ul>li:hover > .pop  {
 	display: block;
 
 }
 
-.nav_links ul ul li {
-	width: 200px;
-    align-items: center;
-    margin: auto;
-    padding: 30px;
-    text-align: center;
-    color: white;
-	
-	font-weight: 400;
-	position: relative;
-	display: list-item;
-	font-size: 18px;
-    display: inline-block;
-
-}
-
-.item_ul{
-    display: flex;
-}
-
-.item>ol>li{
-    padding: 0%g;
-}
