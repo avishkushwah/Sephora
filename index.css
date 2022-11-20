@@ -25,30 +25,31 @@ footer{
     width: 2px;
     height: 20px;
     background-color: rgb(187, 178, 178);
-    margin: 12px 20px;
+    margin: 14px 20px;
 }
 
-.apps{
+.apps>a{
     display: flex;
-    padding: 15px 10px;
-    
+    padding: 15px 5px;
+    text-decoration: none;
+    font-family: 'Play', sans-serif;
 }
 
-.apps>i{
+.apps>a>i{
     color: rgb(226, 68, 94);
 }
 
-.apps>h3{
-    letter-spacing: 1px;
+.apps>a>h3{
     font-weight: 400;
     font-size: 16px;
     font-family: 'Play', sans-serif;
     margin-left: 10px;
     margin-top: -2px;
+    color: rgb(87, 76, 76);
 }
 
 .stars{
-    padding: 12px 20px;
+    padding: 12px 10px;
 }
 
 .stars>i{
@@ -69,7 +70,117 @@ footer{
 
 .head_center{
     font-family: 'Play', sans-serif;
-    padding: 10px 10px;
+    padding: 10px 5px;
     width: 400px;
     text-align: center;
+}
+
+.footer_mid{
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
+.search_bar{
+    border-bottom: 1px solid gray;
+    padding-top: 40px;
+    padding-right: 20px;
+    height: 25px;
+    width: 350px;
+    
+}
+
+.search_bar>i{
+    color: #EA047E;
+    padding: 0px 10px;
+    font-size: 18px;
+    
+}
+
+.search_bar>input{
+    font-size: 18px;
+    border: none;
+    outline: none;
+}
+
+.logo{
+    padding: 0px 80px;
+}
+.logo>img{
+    width: 250px;
+}
+
+.featurs{
+    display: flex;
+    padding-left: 200px;
+    padding-top: 30px;
+}
+
+.nav_links{
+    width: 95%;
+    margin: auto;
+    
+}
+
+.nav_links>ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_links>ul>li{
+    padding: 2px 1px;
+    list-style: none;
+    text-align: center;
+    width: 165px;
+    border-bottom: 1px solid  rgb(187, 178, 178);
+    font-weight: 500;
+    font-family: 'Domine', serif;
+    font-weight: 600;
+}
+
+.nav_links li:hover{
+    color: #EA047E;
+}
+
+.nav_links ul ul {
+    position: absolute;
+	display: none;
+	background-color: #222;
+	top: 190px;
+	text-align: left;
+    left: 0px;
+    width: 100%;
+    
+    
+}
+
+.nav_links ul li:hover>ul  {
+	display: block;
+
+}
+
+.nav_links ul ul li {
+	width: 200px;
+    align-items: center;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    color: white;
+	
+	font-weight: 400;
+	position: relative;
+	display: list-item;
+	font-size: 18px;
+    display: inline-block;
+
+}
+
+.item_ul{
+    display: flex;
+}
+
+.item>ol>li{
+    padding: 0%g;
 }
