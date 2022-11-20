@@ -154,8 +154,26 @@ footer{
     
 }
 
-.nav_links>ul>li:hover > .pop  {
+.nav_links>ul>li:hover > #pop  {
 	display: block;
 
+}
+
+table{
+    width: 80%;
+    padding: 20px 0px;
+    margin: auto;
+    font-size: 14px;
+    font-weight: 400;
+}
+table>th{
+    margin-bottom: 30px;
+}
+td{
+    line-height: 20px;
+}
+
+td:hover{
+    color: #EA047E;
 }
 
