@@ -130,7 +130,7 @@ footer{
 }
 
 .nav_links>ul>li{
-    padding: 2px 1px;
+    padding: 5px 1px;
     list-style: none;
     text-align: center;
     width: 165px;
@@ -138,6 +138,7 @@ footer{
     font-weight: 500;
     font-family: 'Domine', serif;
     font-weight: 600;
+
 }
 
 #pop {
@@ -145,7 +146,7 @@ footer{
 	display: none;
 	background-color: #222;
     font-family: 'Play', sans-serif;
-	top: 190px;
+	top: 205px;
     color: white;
 	text-align: left;
     left: 0px;
@@ -154,9 +155,16 @@ footer{
     
 }
 
+.nav_links>ul>li:hover{
+    box-shadow: 5px 5px 15px rgb(167, 159, 159);
+    color: #EA047E;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+
 .nav_links>ul>li:hover > #pop  {
 	display: block;
-
 }
 
 table{
@@ -175,5 +183,16 @@ td{
 
 td:hover{
     color: #EA047E;
+}
+
+/* banner */
+
+.banner{
+    padding-top: 10px;
+    width: 100%;
+}
+
+.banner>img{
+    width: 100%;
 }
 
