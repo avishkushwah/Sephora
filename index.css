@@ -74,3 +74,44 @@ footer{
     width: 400px;
     text-align: center;
 }
+
+.footer_mid{
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
+.search_bar{
+    border-bottom: 1px solid gray;
+    padding-top: 40px;
+    padding-right: 20px;
+    height: 25px;
+    width: 350px;
+    
+}
+
+.search_bar>i{
+    color: #EA047E;
+    padding: 0px 10px;
+    font-size: 18px;
+    
+}
+
+.search_bar>input{
+    font-size: 18px;
+    border: none;
+    outline: none;
+}
+
+.logo{
+    padding: 0px 80px;
+}
+.logo>img{
+    width: 250px;
+}
+
+.featurs{
+    display: flex;
+    padding-left: 200px;
+    padding-top: 30px;
+}
