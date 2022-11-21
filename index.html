@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sephor India's first online shopping</title>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/6bad7570e0.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +16,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -386,15 +392,30 @@
         </div>
     </footer>
 
-    <div class="banner">
-        <div >
-           <img id="cruser" src="https://logan.nnnow.com/content/dam/nnnow-project/15-nov-2022/Onesize_Homepagebanner.jpg" alt="Error">
-           <button id="left-btn"><img src="images/left.png" alt=""></button>
-           <button id="right-btn"><img src="images/right.png" alt=""></button>
-        </div>
-    </div>
+    
 
-    <!-- DEALS -->
+    
+
+    
+
+<!-- Slider -->
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="https://logan.nnnow.com/content/dam/nnnow-project/15-nov-2022/Onesize_Homepagebanner.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="https://logan.nnnow.com/content/dam/nnnow-project/04-nov-2022/Morroccanoil_Homepagebanner_Bodycaredesktop.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="https://logan.nnnow.com/content/dam/nnnow-project/13-oct-2022/SC_TopBannerdesktop.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="https://logan.nnnow.com/content/dam/nnnow-project/08-nov-2022/Givenchy_Topbannerdesktop.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="https://logan.nnnow.com/content/dam/nnnow-project/16-nov-2022/1125x500caudalie_webcopy.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="https://logan.nnnow.com/content/dam/nnnow-project/15-nov-2022/Mufe_Homepagebanner.jpg" alt=""></div>
+          
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <!-- DEALS -->
 
     <div class="deals">
         <div class="deals_item">STEAL & DEALS</div>
@@ -405,6 +426,13 @@
         <div class="deals_item">TOP FRAGANCE</div>
 
     </div>
+
+
+      <!-- Brand week -->
+      <div class="brandsweek">
+        <h1>#SephoraBrandOfTheWeek</h1>
+        <img src="https://logan.nnnow.com/content/dam/nnnow-project/16-nov-2022/ABH_Brandoftheweekdesktop.psd.jpg" alt="" >
+    </div> 
     
 </body>
 
@@ -439,4 +467,24 @@
         cruser.src=imageslink[imagestate];
     })
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </html>
