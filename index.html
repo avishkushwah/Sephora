@@ -387,8 +387,56 @@
     </footer>
 
     <div class="banner">
-        <img src="https://logan.nnnow.com/content/dam/nnnow-project/15-nov-2022/Onesize_Homepagebanner.jpg" alt="">
+        <div >
+           <img id="cruser" src="https://logan.nnnow.com/content/dam/nnnow-project/15-nov-2022/Onesize_Homepagebanner.jpg" alt="Error">
+           <button id="left-btn"><img src="images/left.png" alt=""></button>
+           <button id="right-btn"><img src="images/right.png" alt=""></button>
+        </div>
+    </div>
+
+    <!-- DEALS -->
+
+    <div class="deals">
+        <div class="deals_item">STEAL & DEALS</div>
+        <div class="deals_item">BEAUTY MINIS UNDER ₹999</div>
+        <div class="deals_item">EVERYDAY ESSENTIALS</div>
+        <div class="deals_item">TRENDING NOW</div>
+        <div class="deals_item">EIDITORS PICK</div>
+        <div class="deals_item">TOP FRAGANCE</div>
+
     </div>
     
 </body>
+
+<script>
+    let imageslink= [
+        "https://logan.nnnow.com/content/dam/nnnow-project/15-nov-2022/Onesize_Homepagebanner.jpg" ,
+        "https://logan.nnnow.com/content/dam/nnnow-project/04-nov-2022/Morroccanoil_Homepagebanner_Bodycaredesktop.jpg" ,
+        "https://logan.nnnow.com/content/dam/nnnow-project/13-oct-2022/SC_TopBannerdesktop.jpg" ,
+        "https://logan.nnnow.com/content/dam/nnnow-project/08-nov-2022/Givenchy_Topbannerdesktop.jpg" 
+    ];
+
+    let letfbtn= document.getElementById("left-btn");
+    let rightbtn = document.getElementById("right-btn");
+    let cruser = document.getElementById("cruser")
+
+    let imagestate = 0; 
+
+    rightbtn.addEventListener("click", function(){
+        imagestate++;
+        if(imagestate===imageslink.length){
+            imagestate=0;
+        }
+        cruser.src=imageslink[imagestate];
+    })
+
+    letfbtn.addEventListener("click", function(){
+        imagestate--;
+        if(imagestate<0){
+            imagestate=imageslink.length-1
+
+        }
+        cruser.src=imageslink[imagestate];
+    })
+</script>
 </html>
