@@ -146,7 +146,7 @@ footer{
 	display: none;
 	background-color: #222;
     font-family: 'Play', sans-serif;
-	top: 205px;
+	top: 200px;
     color: white;
 	text-align: left;
     left: 0px;
@@ -192,7 +192,47 @@ td:hover{
     width: 100%;
 }
 
-.banner>img{
+.banner>div{
     width: 100%;
+    position: relative;
+}
+
+.banner>div>img{
+    width: 100%;
+}
+
+.banner>div>button{
+    position: absolute;
+    top: 50%;
+    font-size: 3rem;
+    background-color: transparent;
+    border: none;
+}
+
+.banner>div>button:nth-child(2){
+    left: 10px;
+}
+
+.banner>div>button:nth-child(3){
+    right: 10px;
+}
+
+/* DEALS */
+
+.deals{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.deals_item{
+    width: 200PX;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-left: 10px;
+    padding: 15px 10px;
 }
 
