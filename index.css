@@ -260,8 +260,14 @@ td:hover{
     margin-left: 10%;
 }
 
+.brand_weeks_list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    margin: auto;
+}
 
-
-
-
+.brand_weeks_list>img{
+    width: 380px;
+}
 
