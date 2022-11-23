@@ -549,17 +549,17 @@ video{
 
 /* FOOTER */
 
-footer{
+header{
     width: 100%;
     margin-top: 80px;
 }
 
-.footer_main{
+.header_main{
     width: 80%;
     margin: auto;
 }
 
-.footer_links{
+.header_links{
     display: flex;
     width: 60%;
     justify-content: space-between;
@@ -567,18 +567,18 @@ footer{
 }
 
 
-.footer_links a{
+.header_links a{
     text-decoration: none;
     letter-spacing: 1px;
     color: #222;
 }
 
-.footer_links a:hover{
+.header_links a:hover{
     color: #EA047E;
 }
 
 
-.footer_links1{
+.header_links1{
     display: flex;
     width: 20%;
     justify-content: space-between;
@@ -587,28 +587,28 @@ footer{
 }
 
 
-.footer_links1 a{
+.header_links1 a{
     text-decoration: none;
     letter-spacing: 1px;
     color: #222;
     font-size: 30px;
 }
 
-.footer_links1 a:hover{
+.header_links1 a:hover{
     color: #EA047E;
 }
 
 
-.footer_links3{
+.header_links3{
     display: flex;
     width: 60%;
     justify-content: space-between;
-    padding-top: 30px;
+    padding-top: 0px;
     margin: auto;
 }
 
 
-.footer_links3 a{
+.header_links3 a{
     text-decoration: none;
     letter-spacing: 1px;
     color: #222;
@@ -617,7 +617,7 @@ footer{
 
 }
 
-.footer_links3>h3{
+.header_links3>h3{
     padding-top: 15px;
 }
 
