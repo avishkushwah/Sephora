@@ -441,7 +441,8 @@ video{
 .subscribe{
     width: 100%;
     height: 170px;
-    background-color: #f2f2f2;
+    background-image: linear-gradient(to right, #DECBA4, #3E5151);
+    
 }
 
 .subscribe>h1{
@@ -484,7 +485,7 @@ video{
 
 .popup {
     width: 800px;
-    background-image: linear-gradient(to right, #DECBA4, #3E5151);
+    background-color: #f2f2f2;
     display: flex;
     border-radius: 10px;
     position: absolute;
@@ -515,3 +516,108 @@ video{
     margin-left: 30px;
     border: none;
 }
+
+
+/* t&C */
+
+.terms{
+    width: 100%;
+
+}
+
+.terms_main{
+    width: 90%;
+    margin: 40px auto;
+
+}
+
+.terms_main h3{
+    text-align: center;
+    font-family: 'Play', sans-serif;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    color: rgb(124, 0, 0);
+}
+
+.terms_main p{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: 'Play', sans-serif;
+    color: rgb(133, 122, 122);
+}
+
+/* FOOTER */
+
+footer{
+    width: 100%;
+    margin-top: 80px;
+}
+
+.footer_main{
+    width: 80%;
+    margin: auto;
+}
+
+.footer_links{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    margin: auto;
+}
+
+
+.footer_links a{
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: #222;
+}
+
+.footer_links a:hover{
+    color: #EA047E;
+}
+
+
+.footer_links1{
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    padding-top: 30px;
+    margin: auto;
+}
+
+
+.footer_links1 a{
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: #222;
+    font-size: 30px;
+}
+
+.footer_links1 a:hover{
+    color: #EA047E;
+}
+
+
+.footer_links3{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    padding-top: 30px;
+    margin: auto;
+}
+
+
+.footer_links3 a{
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: #222;
+    font-size: 14px;
+    font-family: 'Play', sans-serif;
+
+}
+
+.footer_links3>h3{
+    padding-top: 15px;
+}
+
