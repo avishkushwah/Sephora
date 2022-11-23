@@ -22,7 +22,7 @@
 
 </head>
 <body>
-    <footer>
+    <footer id="footer">
         <div class="first_footer">
             <div class="first_footer_main">
             <div class="img"><a href="index.html"><img src="https://cdn02.nnnow.com/web-images/master/navtree_metaData/59b2425ae4b0d70964ee66e0/1505806763887/12NNNOWLOGODESKTOP.png" alt=""></a></div>
@@ -527,10 +527,55 @@
         <div class="swiper-pagination"></div>
       </div>
 
+      <video width="45%" controls autoplay>
+        <source src="images/SEPHORA.mp4" type="video/mp4">
+      </video>
+
+      </div>
+
+      <div class="card_end">
+        <img src="https://logan.nnnow.com/content/dam/nnnow-project/22-march-2022/Loyalty_Strip_Desk.jpg" alt="">
       </div>
 
 
       </div>
+
+
+      <!-- lasy -->
+
+      <section class="lasy">
+        <div class="lasy_head"><h1>Lazy Girl's BFFs</h1></div>
+
+        <div class="lasy_row"> 
+            <img src="https://logan.nnnow.com/content/dam/nnnow-project/05-nov-2022/se/Sephora_ContentP-Story_CreamyConcealers.jpg" alt="">
+            <img src="https://logan.nnnow.com/content/dam/nnnow-project/05-nov-2022/se/Sephora_ContentP-Story_TrendingTints.jpg" alt="">
+            <img src="https://logan.nnnow.com/content/dam/nnnow-project/05-nov-2022/se/Sephora_ContentP-Story_MagicalMascaras.jpg" alt="">
+        </div>
+
+      </section>
+
+
+      <!-- back -->
+
+      <section class="backtotop">
+        <a href="#footer" id="top"> <i class="fa-solid fa-chevron-up"></i>BACK TO TOP</a>
+        <div class="subscribe">
+            <h1>GET THE LATEST NEWS & OFFERS IN BEAUTY & FASHION</h1>
+
+            <div class="add_email">
+                <input type="email" name="email" placeholder="Enter Your Email Address"  required>
+                <h2> <button class="btn" onclick="openPopup()"> SUBSCRIBE </button></h2>
+
+
+                <div class="popup" id="popup">
+                           <h1>Now You Are Part Of SEPHORA All Offers will be Sended You </h1> 
+                           <button class="close"  onclick="closePopup()"> <i class="fa-solid fa-xmark"></i> </button>
+                </div>
+
+            </div>
+
+        </div>
+      </section>
       
     
     
@@ -615,6 +660,19 @@
       },
     });
   </script>
+
+
+<script>
+    let popup = document.getElementById("popup");
+
+function openPopup(){
+    popup.classList.add("open-popup");
+}
+
+function closePopup(){
+    popup.classList.remove("open-popup");
+}
+</script>
 
 
 
