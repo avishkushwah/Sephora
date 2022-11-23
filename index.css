@@ -293,6 +293,7 @@ td:hover{
     width: 50%;
     overflow: hidden;
     height: 50%;
+    margin-top: 30px;
   }
 
   .swiper-slide {
@@ -310,6 +311,7 @@ td:hover{
     -webkit-justify-content: center;
     justify-content: center;
     -webkit-box-align: center;
+    cursor: pointer;
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
@@ -347,7 +349,7 @@ td:hover{
 	transform: translateX(-50%);
 	position: absolute;
 	opacity: 0;
-	transition: 0.5s;
+	transition: 0.7s;
     font-family: 'Play', sans-serif;
 }
 .layer:hover h3{
@@ -367,15 +369,149 @@ td:hover{
 	transform: translateX(-50%);
 	position: absolute;
 	opacity: 0;
-	transition: 0.5s;
+	transition: 0.9s;
     line-height: 20px;
     font-family: 'Play', sans-serif;
 
 }
 
 .layer:hover p{
-	bottom: 50%;
+	bottom: 45%;
 	opacity: 1;
 
 }
 
+video{
+    margin-left: 50px;
+}
+
+
+.card_end{
+   width: 90%;
+   margin: auto;
+}
+
+.card_end img{
+    width: 100%;
+}
+
+/* lasy */
+
+.lasy{
+    width: 90%;
+    margin: 70px auto;
+}
+
+
+.lasy_head>h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+.lasy_row{
+    display: grid;
+    margin-top: 30px;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.lasy_row>img{
+    width: 380px;
+    margin: auto;
+}
+
+
+/* BACK TO TP */
+
+.backtotop>a{
+    display: block;
+    width: 200px;
+    padding: 12px 5px;
+    background-color: #abc72c;
+    margin: 50px auto 0px auto;
+    text-align: center;
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+
+
+.subscribe{
+    width: 100%;
+    height: 170px;
+    background-color: #f2f2f2;
+}
+
+.subscribe>h1{
+    text-align: center;
+    padding-top: 30px;
+    letter-spacing: 1px;
+}
+
+.add_email{
+    width: 600px;
+    margin:  30px auto;
+    display: flex;
+}
+
+.add_email>input{
+    font-size: 20px;
+    width: 400px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-family: 'Play', sans-serif;
+}
+
+.add_email>h2{
+  background-color: black;
+  color: white;
+  
+  
+  font-weight: 400;
+}
+
+.add_email>h2>button{
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    font-size: 22px;
+    font-family: 'Play', sans-serif;
+}
+
+
+.popup {
+    width: 800px;
+    background-image: linear-gradient(to right, #DECBA4, #3E5151);
+    display: flex;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    visibility: hidden;
+    text-align: center;
+    color: black;
+    padding: 30PX 30PX;
+    transition: transform 0.4s, top .04s ;
+}
+
+.popup>h1{
+    font-family: 'Play', sans-serif;
+    letter-spacing: 1px;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 500%;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.close{
+    font-size: 25px;
+    background-color: transparent;
+    margin-left: 30px;
+    border: none;
+}
