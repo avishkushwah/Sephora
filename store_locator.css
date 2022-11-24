@@ -248,3 +248,290 @@ td:hover{
     width: 350px;
     margin-top: 66px;
 }
+
+/* ===============
+=======get app=====
+===================== */
+
+.app_link{
+    width: 100%;
+    background-color: #f6f8fa;
+    display: flex;
+}
+
+.app_image{
+    margin-left: 200px;
+}
+.app_image img{
+    width: 500px;
+}
+
+.app{
+    width: 400px;
+    padding: 20px 20px;
+}
+
+.app h1{
+    margin-top: 70px;
+    font-size: 55px;
+}
+
+.app h3{
+    font-family: 'Play', sans-serif; 
+    margin-top: 20px;
+    letter-spacing: 1px;
+    color: rgb(49, 49, 49);
+}
+
+.app form{
+    display: flex;
+}
+
+.app input{
+    font-size: 22px;
+    font-family: 'Play', sans-serif; 
+    padding: 10px 10px;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+}
+
+#submit{
+    background-color: #EA047E;
+    margin-top: 30px;
+    color: white;
+}
+
+.app_links_img{
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+
+/* FEEDBACK */
+
+.Feedback{
+    width: 100%;
+    margin-top: 50PX;
+}
+
+.feedback_heading{
+    text-align: center;
+    font-size: 55px;
+    margin-bottom: 30px;
+}
+
+.swiper {
+    width: 40%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 300px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+
+  /* .swiper-slide img {
+    display: block;
+    width: 100%;
+  } */
+
+
+  .personal_detail{
+    display: flex;
+    padding: 15px;
+  }
+
+  .personal_detail img{
+    width: 100px;
+  }
+
+  .personal_detail h3{
+    padding-top: 20px;
+    padding-left: 20px;
+    font-family: 'Play', sans-serif; 
+    letter-spacing: 1px;
+  }
+
+  .person p{
+    font-family: 'Play', sans-serif;
+    color: rgb(65, 63, 63);
+    padding: 10px;
+  }
+
+
+  /* BACK */
+
+
+  .backtotop>a{
+    display: block;
+    width: 200px;
+    padding: 12px 5px;
+    background-color: #abc72c;
+    margin: 50px auto 0px auto;
+    text-align: center;
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+
+
+.subscribe{
+    width: 100%;
+    height: 170px;
+    background-image: linear-gradient(to right, #DECBA4, #3E5151);
+    
+}
+
+.subscribe>h1{
+    text-align: center;
+    padding-top: 30px;
+    letter-spacing: 1px;
+}
+
+.add_email{
+    width: 600px;
+    margin:  30px auto;
+    display: flex;
+}
+
+.add_email>input{
+    font-size: 20px;
+    width: 400px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-family: 'Play', sans-serif;
+}
+
+.add_email>h2{
+  background-color: black;
+  color: white;
+  
+  
+  font-weight: 400;
+}
+
+.add_email>h2>button{
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    font-size: 22px;
+    font-family: 'Play', sans-serif;
+}
+
+
+.popup {
+    width: 800px;
+    background-color: #f2f2f2;
+    display: flex;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    visibility: hidden;
+    text-align: center;
+    color: black;
+    padding: 30PX 30PX;
+    transition: transform 0.4s, top .04s ;
+}
+
+.popup>h1{
+    font-family: 'Play', sans-serif;
+    letter-spacing: 1px;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 210%;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.close{
+    font-size: 25px;
+    background-color: transparent;
+    margin-left: 30px;
+    border: none;
+}
+
+
+/* FOOTER */
+
+header{
+    width: 100%;
+    margin-top: 80px;
+}
+
+.header_main{
+    width: 80%;
+    margin: auto;
+}
+
+.header_links{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    margin: auto;
+}
+
+
+.header_links a{
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: #222;
+}
+
+.header_links a:hover{
+    color: #EA047E;
+}
+
+
+.header_links1{
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    padding-top: 30px;
+    margin: auto;
+}
+
+
+.header_links1 a{
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: #222;
+    font-size: 30px;
+}
+
+.header_links1 a:hover{
+    color: #EA047E;
+}
+
+
+.header_links3{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    padding-top: 0px;
+    margin: auto;
+}
+
+
+.header_links3 a{
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: #222;
+    font-size: 14px;
+    font-family: 'Play', sans-serif;
+
+}
+
+.header_links3>h3{
+    padding-top: 15px;
+}
