@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.ico">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/6bad7570e0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <footer id="footer">
+        <div class="first_footer">
+            <div class="first_footer_main">
+            <div class="img"><a href="index.html"><img src="https://cdn02.nnnow.com/web-images/master/navtree_metaData/59b2425ae4b0d70964ee66e0/1505806763887/12NNNOWLOGODESKTOP.png" alt=""></a></div>
+            <div class="vr"></div>
+            <div class="apps"><a href="store_locator.html"><i class="fa-solid fa-location-dot"></i> <h3>Store locator</h3> </a> </div>
+            <div class="stars"> <i class="fa-solid fa-star" id="purple_star"></i> <i class="fa-solid fa-star" id="yellow_star"></i> <i class="fa-solid fa-star" id="pink_star"></i></div>
+            <div class="head_center">Get 10% OFF on your first purchase. Use Code: BEAUTY10 </div>
+            <div class="stars">  <i class="fa-solid fa-star" id="pink_star"></i> <i class="fa-solid fa-star" id="yellow_star"></i> <i class="fa-solid fa-star" id="purple_star"></i> </div>
+            <div class="apps"><a href="get_app.html"> <i class="fa-solid fa-file-arrow-down"></i>  <h3>Get app</h3> </a> </div>
+            
+            <div class="vr"></div>
+            <div class="apps"><a href="store_locator.html"> <i class="fa-solid fa-box"></i>  <h3>Track order</h3> </a> </div>
+            <div class="vr"></div>
+            <div class="apps"><a href="store_locator.html"> <i class="fa-solid fa-martini-glass"></i>  <h3>Loyalty</h3> </a> </div>
+            
+
+            </div>
+        </div>
+
+        <div class="footer_mid">
+            <div class="search_bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="search" placeholder="Search SHEPORA">
+            </div>
+            <div class="logo">
+                <img src="https://cdn07.nnnow.com/web-images/master/navtree_metaData/59b2657be4b0e6b6e16a9180/1548053082431/se.png" alt="">
+            </div>
+            <div class="featurs">
+                <div class="apps"><a href="store_locator.html"> <i class="fa-solid fa-heart"></i> </a> </div>
+                <div class="vr"></div>
+                <div class="apps"><a href="store_locator.html"> <i class="fa-solid fa-bag-shopping"></i> </a> </div>
+                <div class="vr"></div>
+                <div class="apps"> <a href="login.html"><i class="fa-solid fa-user"></i> <h3>Login</h3> </a> </div>
+
+                
+
+            </div>
+
+            
+        </div>
+        
+    </footer>
+
+    <!-- login -->
+
+    <section class="login">
+        <div class="login_head">
+            <h1>LOGIN</h1>
+        </div>
+        <form>
+             <input type="email" placeholder="ENTER EMAIL" id="email">
+             <input type="password" placeholder="ENTER PASSWORD" id="password">
+             <input type="submit" value="LOGIN"  class="login_btn">
+             
+        </form>
+
+        <div class="or">
+            <hr><h3>OR</h3> <hr>
+        </div>
+
+        <button class="register_btn"><a href="SingUp.html">REGISTER</a></button>
+
+
+    </section>
+</body>
+
+<script>
+    let form = document.querySelector("form");
+
+    let signupLS= JSON.parse(localStorage.getItem("signup")) || [];
+
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+        if(signupLS.length ===0){
+            alert("No user Exist");
+            return;
+        } 
+
+        let obj={
+            email:form.email.value,
+            password:form.password.value,
+        }
+
+        let islogin=false;
+        signupLS.forEach(function(ele){
+            if(ele.email===obj.email && ele.password===obj.password){
+                islogin=true;
+                localStorage.setItem("login", JSON.stringify(ele));
+                alert("Succesfully Login");
+                window.location.href="shoping_page.html";
+            }
+        });
+
+       if(islogin===false){
+        alert("not succesfull");
+       }
+    })
+</script>
+</html>

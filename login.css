@@ -1,0 +1,275 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+footer{
+    width: 100%;
+}
+
+.first_footer{
+    background-color: #f3f3f3;
+}
+
+.first_footer_main{
+    width: 93%;
+    margin: auto;
+    display: flex;
+}
+
+.img img{
+    width:110px;
+}
+
+.vr{
+    width: 2px;
+    height: 20px;
+    background-color: rgb(187, 178, 178);
+    margin: 14px 20px;
+}
+
+.apps>a{
+    display: flex;
+    padding: 15px 5px;
+    text-decoration: none;
+    font-family: 'Play', sans-serif;
+}
+
+.apps>a>i{
+    color: rgb(226, 68, 94);
+}
+
+.apps>a>h3{
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Play', sans-serif;
+    margin-left: 10px;
+    margin-top: -2px;
+    color: rgb(87, 76, 76);
+}
+
+.stars{
+    padding: 12px 10px;
+}
+
+.stars>i{
+    transform: rotate(-45deg);
+    font-size: 14px;
+}
+
+#purple_star{
+    color: purple;
+}
+
+#yellow_star{
+    color: yellow;
+}
+#pink_star{
+    color: #EA047E;
+}
+
+.head_center{
+    font-family: 'Play', sans-serif;
+    padding: 10px 5px;
+    width: 400px;
+    text-align: center;
+}
+
+.footer_mid{
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
+.search_bar{
+    border-bottom: 1px solid gray;
+    padding-top: 40px;
+    padding-right: 20px;
+    height: 25px;
+    width: 350px;
+    
+}
+
+.search_bar>i{
+    color: #EA047E;
+    padding: 0px 10px;
+    font-size: 18px;
+    
+}
+
+.search_bar>input{
+    font-size: 18px;
+    border: none;
+    outline: none;
+}
+
+.logo{
+    padding: 0px 80px;
+}
+.logo>img{
+    width: 250px;
+}
+
+.featurs{
+    display: flex;
+    padding-left: 200px;
+    padding-top: 30px;
+}
+
+.nav_links{
+    width: 95%;
+    margin: auto;
+    
+}
+
+.nav_links>ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_links>ul>li{
+    padding: 5px 1px;
+    list-style: none;
+    text-align: center;
+    width: 165px;
+    border-bottom: 1px solid  rgb(187, 178, 178);
+    font-weight: 500;
+    font-family: 'Domine', serif;
+    font-weight: 600;
+
+}
+
+#pop {
+    position: absolute;
+	display: none;
+	background-color: #222;
+    font-family: 'Play', sans-serif;
+	top: 200px;
+    color: white;
+	text-align: left;
+    left: 0px;
+    width: 100%;
+    
+    
+}
+
+.nav_links>ul>li:hover{
+    box-shadow: 5px 5px 15px rgb(167, 159, 159);
+    color: #EA047E;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+
+.nav_links>ul>li:hover > #pop  {
+	display: block;
+    z-index: 99999;
+}
+
+table{
+    width: 80%;
+    padding: 20px 0px;
+    margin: auto;
+    font-size: 14px;
+    font-weight: 400;
+}
+table>th{
+    margin-bottom: 30px;
+}
+td{
+    line-height: 20px;
+}
+
+td:hover{
+    color: #EA047E;
+}
+
+
+/* LOGIN */
+.login{
+    width: 60%;
+    margin: auto;
+    height: 70vh;
+    background-color: #FF9A8B;
+    background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+    font-family: 'Play', sans-serif;
+    text-align: center;
+
+
+}
+
+.login_head h1{
+    text-align: center;
+    font-size: 55px;
+    padding-top: 20px;
+    font-weight: 500;
+}
+form{
+    width: 350px;
+    margin: 40px auto;
+}
+form>input{
+    display: block;
+    width: 330px;
+    padding: 5px 10px;
+    font-family: 'Play', sans-serif;
+    font-size: 22px;
+    margin-top: 20px;
+    
+}
+
+.login_btn{
+    width: 350px;
+    height: 40px;
+    background-color: #EA047E;
+    border-radius: 10px;
+    color: white;
+    font-size: 25px;
+    font-size: 600;
+    letter-spacing: 1px;
+    border: none;
+}
+
+.login_btn:hover{
+    background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+    border: 2px solid white;
+}
+
+
+.or{
+    width: 350px;
+    margin: auto;
+    display: flex;
+}
+
+.or>hr{
+    width: 200px;
+    height: 0px;
+    margin-top: 10px;
+}
+
+.register_btn{
+    width: 350px;
+    height: 40px;
+    background-color: #EA047E;
+    border-radius: 10px;
+    color: white;
+    font-size: 25px;
+    font-size: 600;
+    letter-spacing: 1px;
+    border: none;
+    margin-top: 20px;
+}
+
+.register_btn>a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Play', sans-serif;
+}
+
+.register_btn:hover{
+    background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+    border: 2px solid white;
+}

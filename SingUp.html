@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SingUP</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.ico">
+
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://kit.fontawesome.com/6bad7570e0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        /* LOGIN */
+.register{
+    width: 60%;
+    margin: auto;
+    height: 70vh;
+    background-color: #3E5151;
+    
+    background-image: linear-gradient(toright, #DECBA4, #3E5151);
+    font-family: 'Play', sans-serif;
+    text-align: center;
+
+
+}
+
+.register_head h1{
+    text-align: center;
+    font-size: 55px;
+    color: white;
+    padding-top: 20px;
+    font-weight: 500;
+}
+form{
+    width: 350px;
+    margin: 40px auto;
+}
+form>input{
+    display: block;
+    width: 330px;
+    padding: 5px 10px;
+    font-family: 'Play', sans-serif;
+    font-size: 22px;
+    margin-top: 20px;
+    
+}
+
+.register_btn{
+    width: 350px;
+    height: 40px;
+    background-color: #EA047E;
+    border-radius: 10px;
+    color: white;
+    font-size: 25px;
+    font-size: 600;
+    letter-spacing: 1px;
+    border: none;
+}
+
+.register_btn:hover{
+    background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+    border: 2px solid white;
+}
+    </style>
+</head>
+<body>
+
+    <section class="register">
+        <div class="register_head">
+           <h1> REGISTER </h1>
+        </div>
+    <form>
+        <input type="text" id="username" placeholder="ENTER USERNAME">
+        <input type="email" id="email" placeholder="ENTER EMAIL">
+        <input type="password" id="password" placeholder="Enter Password">
+        <input type="submit" value="SingUp" class="register_btn">
+    </form>
+
+    </section>
+    
+</body>
+<script>
+    let form = document.querySelector("form");
+
+    let signupLS=JSON.parse(localStorage.getItem("signup")) || [];
+
+    form.addEventListener("submit", function(event){
+            event.preventDefault();
+
+            let obj={
+                username:form.username.value,
+                email:form.email.value,
+                password:form.password.value,
+                
+            }
+            if(obj.username =="" || obj.email=="" || obj.password ==""){
+                alert("Felid Empty")
+                return
+            }
+
+
+            signupLS.push(obj);
+            localStorage.setItem("signup", JSON.stringify(signupLS));
+            window.location.href="login.html"
+
+
+
+    })
+</script>
+</html>
