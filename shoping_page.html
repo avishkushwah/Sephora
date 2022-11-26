@@ -8,6 +8,232 @@
     <link rel="icon" type="image/x-icon" href="images/logo.ico">
 </head>
 <body>
+    <select  id="filter">
+        <option value="">Select Catogery</option>
+        <option value="Foundation">Foundation</option>
+        <option value="bb_cc_cream">BB & CC Cream</option>
+        <option value="concealer">concealer</option>
+
+    </select>
+    <div id="container">
+
+    </div>
     
 </body>
+
+<script>
+    let product_data=[
+        {
+            brand:"HUDA BEAUTY",
+            name:"#FauxFilter Skin Finish Buildable Coverage Foundation Stick",
+            price:"1625",
+            productID:"Foundation1",
+            catogery:"Foundation",
+            img:"https://cdn03.nnnow.com/web-images/large/styles/V6IA0GDPDAD/1609232297994/1.jpg",
+        },
+
+        {
+            brand:"HUDA BEAUTY",
+            name:"##Faux Filter Luminous Matte Full Coverage Liquid Foundation - 110N Angel Food",
+            price:"2640",
+            productID:"Foundation2",
+            catogery:"Foundation",
+            img:"https://cdn01.nnnow.com/web-images/large/styles/85JV0IBOU8B/1631790324298/1.jpg",
+        },
+
+        {
+            brand:"HUDA BEAUTY",
+            name:"#Faux Filter Luminous Matte Full Coverage Liquid Foundation - 405N Biscotti",
+            price:"1980",
+            productID:"Foundation3",
+            catogery:"Foundation",
+            img:"https://cdn00.nnnow.com/web-images/medium/styles/7XVMHGB8ZV5/1631790324280/1.jpg",
+        },
+
+        {
+            brand:"HUDA BEAUTY",
+            name:"Easy Bake Loose Powder Foundation - Kunafa",
+            price:"1770",
+            productID:"Foundation4",
+            catogery:"Foundation",
+            img:"https://cdn15.nnnow.com/web-images/large/styles/V30BLRNMP0O/1567571858049/1.jpg",
+        },
+
+
+        // BB & CC CREAM ============================================
+
+        {
+            brand:"SHISEIDO",
+            name:"Perfect Hydrating BB Cream SPF 30",
+            price:"2400",
+            productID:"bb_cc_cream1",
+            catogery:"bb_cc_cream",
+            img:"https://cdn13.nnnow.com/web-images/large/styles/PXKCBZ1AAQ5/1495792112766/1.jpg",
+        },
+
+        {
+            brand:"FOREST ESSENTIALS",
+            name:"Som Rasa Silk Skin Tint - Chandan",
+            price:"2750",
+            productID:"bb_cc_cream2",
+            catogery:"bb_cc_cream",
+            img:"https://cdn09.nnnow.com/web-images/large/styles/G52010XWEVU/1660795165588/1.jpg",
+        },
+
+        {
+            brand:"CLINIQUE",
+            name:"Clinique ID™ With Dramatically Different™ Moisturizing BB-Gel",
+            price:"3100",
+            productID:"bb_cc_cream3",
+            catogery:"bb_cc_cream",
+            img:"https://cdn09.nnnow.com/web-images/large/styles/DJA1WA697WV/1585307687501/1.jpg",
+        },
+
+        {
+            brand:"SMASHBOX",
+            name:"Halo Healthy Glow Tinted Moisturizer Broad Spectrum SPF 25",
+            price:"2990",
+            productID:"bb_cc_cream4",
+            catogery:"bb_cc_cream",
+            img:"https://cdn13.nnnow.com/web-images/medium/styles/JIDP3LQWU3N/1615885957879/1.jpg",
+        },
+
+        {
+            brand:"GIVENCHY",
+            name:"Skin Perfecto Compact Cream SPF15",
+            price:"5750",
+            productID:"bb_cc_cream5",
+            catogery:"bb_cc_cream",
+            img:"https://cdn05.nnnow.com/web-images/large/styles/Q0DVQUFGHK3/1665569994869/1.jpg",
+        },
+
+        // Concealer ==================================== 
+
+        {
+            brand:"HUDA BEAUTY",
+            name:"Overachiever Concealer - 06G Nougat",
+            price:"1250",
+            productID:"Concealer1",
+            catogery:"concealer",
+            img:"https://cdn08.nnnow.com/web-images/large/styles/1IBV731R6TS/1567571357715/1.jpg",
+        },
+
+        {
+            brand:"SEPHORA COLLECTION",
+            name:"Best Skin Ever High Coverage Concealer - T33",
+            price:"1500",
+            productID:"Concealer2",
+            catogery:"concealer",
+            img:"https://cdn05.nnnow.com/web-images/large/styles/BO40BZNNC6G/1617723263013/1.jpg",
+        },
+
+        {
+            brand:"SEPHORA COLLECTION",
+            name:"Color Corrector - Peach",
+            price:"950",
+            productID:"Concealer3",
+            catogery:"concealer",
+            img:"https://cdn07.nnnow.com/web-images/large/styles/UTF2LFWTJJ8/1555306181480/1.jpg",
+        },
+
+        {
+            brand:"SEPHORA COLLECTION",
+            name:"Best Skin Ever High Coverage Concealer - T36",
+            price:"1500",
+            productID:"Concealer4",
+            catogery:"concealer",
+            img:"https://cdn14.nnnow.com/web-images/large/styles/EEN9RHPTQPW/1617724499551/1.jpg",
+        },
+
+        {
+            brand:"SEPHORA COLLECTION",
+            name:"Bright Future - Smoothing & Brightening Concealer - 06",
+            price:"650",
+            productID:"Concealer5",
+            catogery:"concealer",
+            img:"https://cdn19.nnnow.com/web-images/large/styles/K3YUB61Z1ZE/1555306652266/1.jpg",
+        },
+
+
+
+
+        
+    ]
+</script>
+
+<script>
+    let container=document.getElementById("container");
+    let filter=document.getElementById("filter");
+    let cartLS=JSON.parse(localStorage.getItem("cart-page")) || [];
+     
+    function Display(data){
+        container.innerHTML=null;
+        data.forEach(function(ele){
+             let product=document.createElement("div");
+             let img=document.createElement("img");
+             img.src = ele.img;
+
+             let name= document.createElement("h1");
+             name.textContent = ele.name;
+
+             let price=document.createElement("h2");
+             price.textContent=ele.price;
+
+             let catogery=document.createElement("p");
+             catogery.textContent=ele.catogery;
+
+             let brand=document.createElement("h2");
+             brand.textContent=ele.brand;
+
+             let cart= document.createElement("button");
+             cart.textContent="ADD to Cart";
+             cart.addEventListener("click", function(){
+                Addtocart(ele);
+
+             })
+
+
+             product.append(img,brand, name, price, catogery, cart);
+
+             container.append(product);
+        })
+            
+        
+        
+    }
+    Display(product_data)
+
+    filter.addEventListener("change",function(){
+        if(filter.value===""){
+            Display(product_data);
+        }else{
+        let filtered=product_data.filter(function(ele){
+           return ele.catogery===filter.value;
+        })
+
+        Display(filtered);
+        } 
+    })
+
+    function Addtocart(product){
+        let iscardAdded=false;
+        for (let i=0;i<cartLS.length;i++){
+            if(cartLS[i].productID===product.productID){
+                alert("Product Already in The Cart")
+                iscardAdded=true;
+                break;
+            }
+        }
+        if(iscardAdded===false){
+        cartLS.push((product));
+        alert("Product added succesfully");
+        localStorage.setItem("cart-page",JSON.stringify(cartLS));
+        }
+
+    }
+
+     
+
+
+</script>
 </html>
