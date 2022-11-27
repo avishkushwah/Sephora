@@ -6,6 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
 </head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+
+    #container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    
+    img{
+        width: 200px;
+    }
+</style>
 <body>
     <h1>TOTAL CARD VALUE:- <span id="total-price">0</span></h1>
     <div id="container">
@@ -22,7 +37,7 @@
     function Display(data){
         container.innerHTML=null;
         var total=0;
-        data.forEach(function(ele){
+        data.forEach(function(ele,index){
              total+=Number(ele.price);
              let product=document.createElement("div");
              let img=document.createElement("img");
@@ -30,6 +45,7 @@
 
              let name= document.createElement("h1");
              name.textContent = ele.name;
+             
 
              let price=document.createElement("h2");
              price.textContent=ele.price;
@@ -43,6 +59,7 @@
              let deletBtn= document.createElement("button");
              deletBtn.textContent="REMOVE";
              deletBtn.addEventListener("click", function(){
+                Deletcart(index);
             })
 
 
@@ -55,5 +72,14 @@
         
     }
     Display(cartLS);
+
+
+    function Deletcart(index){
+        let deletedcart=cartLS.filter(function(ele,i){
+            return i!== index;
+        })
+        Display(deletedcart);
+        localStorage.setItem("cart-page",JSON.stringify(deletedcart))
+    }
 </script>
 </html>
