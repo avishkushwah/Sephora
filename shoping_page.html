@@ -6,8 +6,960 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEPHORA Online</title>
     <link rel="icon" type="image/x-icon" href="images/logo.ico">
+
+    <script src="https://kit.fontawesome.com/6bad7570e0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
 </head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+
+
+    footer{
+    width: 100%;
+}
+
+.first_footer{
+    background-color: #f3f3f3;
+}
+
+.first_footer_main{
+    width: 93%;
+    margin: auto;
+    display: flex;
+}
+
+.img img{
+    width:110px;
+}
+
+.vr{
+    width: 2px;
+    height: 20px;
+    background-color: rgb(187, 178, 178);
+    margin: 14px 20px;
+}
+
+.apps>a{
+    display: flex;
+    padding: 15px 5px;
+    text-decoration: none;
+    font-family: 'Play', sans-serif;
+}
+
+.apps>a>i{
+    color: rgb(226, 68, 94);
+}
+
+.apps>a>h3{
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Play', sans-serif;
+    margin-left: 10px;
+    margin-top: -2px;
+    color: rgb(87, 76, 76);
+}
+
+.stars{
+    padding: 12px 10px;
+}
+
+.stars>i{
+    transform: rotate(-45deg);
+    font-size: 14px;
+}
+
+#purple_star{
+    color: purple;
+}
+
+#yellow_star{
+    color: yellow;
+}
+#pink_star{
+    color: #EA047E;
+}
+
+.head_center{
+    font-family: 'Play', sans-serif;
+    padding: 10px 5px;
+    width: 400px;
+    text-align: center;
+}
+
+.footer_mid{
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
+.search_bar{
+    border-bottom: 1px solid gray;
+    padding-top: 40px;
+    padding-right: 20px;
+    height: 25px;
+    width: 350px;
+    
+}
+
+.search_bar>i{
+    color: #EA047E;
+    padding: 0px 10px;
+    font-size: 18px;
+    
+}
+
+.search_bar>input{
+    font-size: 18px;
+    border: none;
+    outline: none;
+}
+
+.logo{
+    padding: 0px 80px;
+}
+.logo>img{
+    width: 250px;
+}
+
+.featurs{
+    display: flex;
+    padding-left: 200px;
+    padding-top: 30px;
+}
+
+.nav_links{
+    width: 95%;
+    margin: auto;
+    
+}
+
+.nav_links>ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_links>ul>li{
+    padding: 5px 1px;
+    list-style: none;
+    text-align: center;
+    width: 165px;
+    border-bottom: 1px solid  rgb(187, 178, 178);
+    font-weight: 500;
+    font-family: 'Domine', serif;
+    font-weight: 600;
+
+}
+
+#pop {
+    position: absolute;
+	display: none;
+	background-color: #222;
+    font-family: 'Play', sans-serif;
+	top: 200px;
+    color: white;
+	text-align: left;
+    left: 0px;
+    width: 100%;
+    
+    
+}
+
+.nav_links>ul>li:hover{
+    box-shadow: 5px 5px 15px rgb(167, 159, 159);
+    color: #EA047E;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+
+.nav_links>ul>li:hover > #pop  {
+	display: block;
+    z-index: 99999;
+}
+
+table{
+    width: 80%;
+    padding: 20px 0px;
+    margin: auto;
+    font-size: 14px;
+    font-weight: 400;
+}
+table>th{
+    margin-bottom: 30px;
+}
+td{
+    line-height: 20px;
+}
+
+td:hover{
+    color: #EA047E;
+}
+
+
+
+
+
+
+
+
+
+
+    #container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        justify-content: space-between;
+    }
+
+    .each{
+        height: 80vh;
+        width: 90%;
+        margin: 30px auto;
+    }
+    
+    img{
+        width: 300px;
+    }
+
+    img:hover{
+        
+    }
+
+    .product_contain{
+        position: relative;
+        top: -41%;
+    }
+
+    .product_contain h1{
+        text-align: center;
+        font-size: 16px;
+        width: 250px;
+        font-family: 'Play', sans-serif;
+        color: #222;
+        margin: 10px auto;
+        
+    }
+
+    h2{
+        font-size: 20px;
+        text-align: center;
+        font-family: 'Play', sans-serif;
+        color: #EA047E;
+        font-weight: 600;
+        position: relative;
+        top: -41%;
+    }
+    
+
+    .price_mod{
+        display: flex;
+        border: none;
+        justify-content: space-between;
+        width: 55px;
+        margin: auto;
+        font-family: 'Play', sans-serif;
+    }
+    
+
+    .cartbtn{
+        position: relative;
+        left: 50%;
+        height: 40%;
+        bottom: 0%;
+        border: none;
+        transition: 0.05s;
+        width: 100%;
+        top: -41%;
+        background-color: transparent;
+        transform: translateX(-50%);
+        z-index: 9999;
+    }
+
+    .cartbtn:hover{
+        
+        bottom: 20%;
+	    background: rgba(91, 209, 215);
+    }
+
+    .cartbtn:hover img{
+        bottom: 49%;
+	    opacity: 1;
+        
+
+    }
+    .cartbtn>img{
+        width: 70px;
+	   color: white;
+	   font-size: 25px;
+	   bottom: 0%;
+	   left: 50%;
+	   transform: translateX(-50%);
+	   position: absolute;
+	   opacity: 0;
+	   transition: 0.5s;
+        
+    }
+
+    
+
+</style>
 <body>
+
+    <footer id="footer">
+        <div class="first_footer">
+            <div class="first_footer_main">
+            <div class="img"><a href="index.html"><img src="https://cdn02.nnnow.com/web-images/master/navtree_metaData/59b2425ae4b0d70964ee66e0/1505806763887/12NNNOWLOGODESKTOP.png" alt=""></a></div>
+            <div class="vr"></div>
+            <div class="apps"><a href="store_locator.html"><i class="fa-solid fa-location-dot"></i> <h3>Store locator</h3> </a> </div>
+            <div class="stars"> <i class="fa-solid fa-star" id="purple_star"></i> <i class="fa-solid fa-star" id="yellow_star"></i> <i class="fa-solid fa-star" id="pink_star"></i></div>
+            <div class="head_center">Get 10% OFF on your first purchase. Use Code: BEAUTY10 </div>
+            <div class="stars">  <i class="fa-solid fa-star" id="pink_star"></i> <i class="fa-solid fa-star" id="yellow_star"></i> <i class="fa-solid fa-star" id="purple_star"></i> </div>
+            <div class="apps"><a href="get_app.html"> <i class="fa-solid fa-file-arrow-down"></i>  <h3>Get app</h3> </a> </div>
+            
+            <div class="vr"></div>
+            <div class="apps"><a href="store_locator.html"> <i class="fa-solid fa-box"></i>  <h3>Track order</h3> </a> </div>
+            <div class="vr"></div>
+            <div class="apps"><a href="store_locator.html"> <i class="fa-solid fa-martini-glass"></i>  <h3>Loyalty</h3> </a> </div>
+            
+
+            </div>
+        </div>
+
+        <div class="footer_mid">
+            <div class="search_bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="search" placeholder="Search SHEPORA">
+            </div>
+            <div class="logo">
+                <img src="https://cdn07.nnnow.com/web-images/master/navtree_metaData/59b2657be4b0e6b6e16a9180/1548053082431/se.png" alt="">
+            </div>
+            <div class="featurs">
+                <div class="apps"><a href="store_locator.html"> <i class="fa-solid fa-heart"></i> </a> </div>
+                <div class="vr"></div>
+                <div class="apps"><a href="cart.html"> <i class="fa-solid fa-bag-shopping"></i> </a> </div>
+                <div class="vr"></div>
+                <div class="apps"> <a href="login.html"><i class="fa-solid fa-user"></i> <h3>Login</h3> </a> </div>
+
+            </div>
+
+            
+        </div>
+        <div class="nav_links">
+            <ul>
+                <li>SALE</li>
+                <li>MAKE UP
+                    
+                    <div id="pop">
+                        <table>
+                            <tr>
+                                <th>FACE</th>
+                                <th>EYES</th>
+                                <th>LIPS</th>
+                                <th>CHEEK</th>
+                                <th>NAIL MACKUP</th>
+                            </tr>
+
+                            <tr>
+                                <td>Foundation</td>
+                                <td>Eye peetles</td>
+                                <td>Lip Stick</td>
+                                <td>Blush</td>
+                                <td>Nail polish</td>
+                            </tr>
+
+                            <tr>
+                                <td>BB & CC cream</td>
+                                <td>Maskara</td>
+                                <td>Lips stain</td>
+                                <td>Drozern</td>
+                                <td>Nail care</td>
+                            </tr>
+
+                            <tr>
+                                <td>Conceler</td>
+                                <td>Eyeliner</td>
+                                <td>Lipsglose</td>
+                                <td>Highlighter</td>
+                                <td>Mincure & Precidure tool</td>
+                            </tr>
+
+                            <tr>
+                                <td>Face primer</td>
+                                <td>Eyebrow</td>
+                                <td>Lips Liners</td>
+                                <td>Face oils</td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td>Highlighter </td>
+                                <td>Eyeshadow</td>
+                                <td>Lip Bam & treatment</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Face brushes</td>
+                                <td>Eye primer</td>
+                                <td>Lip brusher</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td>Mackup Palettel</td>
+                                <td>Eye brusher</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                            
+                        
+                </li>
+                <li>SKINCARE
+                    <div id="pop">
+                        <table>
+                            <tr>
+                                <th>MOISTURIZER</th>
+                                <th>CLEANSERS</th>
+                                <th>TREATMENT & HIGH TECH TOOL</th>
+                                <th>MASKS</th>
+                            </tr>
+
+                            <tr>
+                                <td>Moisturizer</td>
+                                <td>Fach wash & cleansers</td>
+                                <td>Face scrum</td>
+                                <td>Fask masks</td>
+                                
+                            </tr>
+
+                            <tr>
+                                <td>Night creams</td>
+                                <td>Mackup remover</td>
+                                <td>Cleansing Tools</td>
+                                <td>Sheet Masks</td>
+                                
+                            </tr>
+
+                            <tr>
+                                <td>Mists & Essances</td>
+                                <td>Face wipes</td>
+                                <td>Eye creams & treatment</td>
+                                <td>Eye masks</td>
+                            </tr>
+
+                            <tr>
+                                <td>BB & CC creams</td>
+                                <td>Toners</td>
+                                <td></td>
+                                <td>Noise Mackup & Stirps</td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td> </td>
+                                <td>Hand Seitizer</td>
+                                <td></td>
+                                <td>Hair Masks</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Hand Masks</td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Foot Masks</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                </li>
+                <li>FRAGANCE
+                    <div id="pop">
+                        <table>
+                            <tr>
+                                <th>WOMEN</th>
+                                <th>MEN</th>
+                                
+                            </tr>
+
+                            <tr>
+                                <td>Perfume</td>
+                                <td>Mists & Deodrant</td>
+                                
+                            </tr>
+
+                            <tr>
+                                <td>Perfume</td>
+                                <td>Mists & Deodrant</td>
+                                
+                            </tr>
+
+                            
+                        </table>
+                    </div>
+                </li>
+                <li>HAIRCARE
+                    <div id="pop">
+                        <table>
+                            <tr>
+                                <th>SHAMPOO & CONDITONER</th>
+                                <th>HAIRSTYLING & TREATMENT</th>
+                                
+                            </tr>
+
+                            <tr>
+                                <td>Shampoo</td>
+                                <td>Hair Spray</td>
+                                
+                            </tr>
+
+                            <tr>
+                                <td>Conditioner</td>
+                                <td>Hair Oil</td>
+                                
+                            </tr>
+
+                            
+                        </table>
+                    </div>
+                </li>
+                <li>TOOLES & BRUSHES
+                    <div id="pop">
+                        <table>
+                            <tr>
+                                <th>FACE</th>
+                                <th>EYES</th>
+                                <th>LIPS</th>
+                                <th>CHEEK</th>
+                                <th>NAIL MACKUP</th>
+                            </tr>
+
+                            <tr>
+                                <td>Foundation</td>
+                                <td>Eye peetles</td>
+                                <td>Lip Stick</td>
+                                <td>Blush</td>
+                                <td>Nail polish</td>
+                            </tr>
+
+                            <tr>
+                                <td>BB & CC cream</td>
+                                <td>Maskara</td>
+                                <td>Lips stain</td>
+                                <td>Drozern</td>
+                                <td>Nail care</td>
+                            </tr>
+
+                            <tr>
+                                <td>Conceler</td>
+                                <td>Eyeliner</td>
+                                <td>Lipsglose</td>
+                                <td>Highlighter</td>
+                                <td>Mincure & Precidure tool</td>
+                            </tr>
+
+                            <tr>
+                                <td>Face primer</td>
+                                <td>Eyebrow</td>
+                                <td>Lips Liners</td>
+                                <td>Face oils</td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td>Highlighter </td>
+                                <td>Eyeshadow</td>
+                                <td>Lip Bam & treatment</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Face brushes</td>
+                                <td>Eye primer</td>
+                                <td>Lip brusher</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td>Mackup Palettel</td>
+                                <td>Eye brusher</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li>BRANDS
+                    <div id="pop">
+                        <table>
+                            <tr>
+                                <th>FACE</th>
+                                <th>EYES</th>
+                                <th>LIPS</th>
+                                <th>CHEEK</th>
+                                <th>NAIL MACKUP</th>
+                            </tr>
+
+                            <tr>
+                                <td>Foundation</td>
+                                <td>Eye peetles</td>
+                                <td>Lip Stick</td>
+                                <td>Blush</td>
+                                <td>Nail polish</td>
+                            </tr>
+
+                            <tr>
+                                <td>BB & CC cream</td>
+                                <td>Maskara</td>
+                                <td>Lips stain</td>
+                                <td>Drozern</td>
+                                <td>Nail care</td>
+                            </tr>
+
+                            <tr>
+                                <td>Conceler</td>
+                                <td>Eyeliner</td>
+                                <td>Lipsglose</td>
+                                <td>Highlighter</td>
+                                <td>Mincure & Precidure tool</td>
+                            </tr>
+
+                            <tr>
+                                <td>Face primer</td>
+                                <td>Eyebrow</td>
+                                <td>Lips Liners</td>
+                                <td>Face oils</td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td>Highlighter </td>
+                                <td>Eyeshadow</td>
+                                <td>Lip Bam & treatment</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Face brushes</td>
+                                <td>Eye primer</td>
+                                <td>Lip brusher</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td>Mackup Palettel</td>
+                                <td>Eye brusher</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    
+
+
+
+    <!-- FILTER -->
+    <select  id="filter">
+        <option value="">Select Catogery</option>
+        <option value="Foundation">Foundation</option>
+        <option value="bb_cc_cream">BB & CC Cream</option>
+        <option value="concealer">concealer</option>
+
+    </select>
+
+    <!-- CONTAINER -->
+    <div id="container">
+
+    </div>
     
 </body>
+
+<script>
+    let product_data=[
+        {
+            brand:"HUDA BEAUTY",
+            name:"#FauxFilter Skin Finish Buildable Coverage Foundation Stick",
+            price:"1625",
+            currency:"₹",
+            productID:"Foundation1",
+            catogery:"Foundation",
+            img:"https://cdn03.nnnow.com/web-images/large/styles/V6IA0GDPDAD/1609232297994/1.jpg",
+        },
+
+        {
+            brand:"HUDA BEAUTY",
+            name:"#Faux Filter Luminous Matte Full Coverage Liquid Foundation - 110N Angel Food",
+            price:"2640",
+            currency:"₹",
+            productID:"Foundation2",
+            catogery:"Foundation",
+            img:"https://cdn01.nnnow.com/web-images/large/styles/85JV0IBOU8B/1631790324298/1.jpg",
+        },
+
+        {
+            brand:"HUDA BEAUTY",
+            name:"#Faux Filter Luminous Matte Full Coverage Liquid Foundation - 405N Biscotti",
+            price:"1980",
+            currency:"₹",
+            productID:"Foundation3",
+            catogery:"Foundation",
+            img:"https://cdn00.nnnow.com/web-images/medium/styles/7XVMHGB8ZV5/1631790324280/1.jpg",
+        },
+
+        {
+            brand:"HUDA BEAUTY",
+            name:"Easy Bake Loose Powder Foundation - Kunafa",
+            price:"1770",
+            currency:"₹",
+            productID:"Foundation4",
+            catogery:"Foundation",
+            img:"https://cdn15.nnnow.com/web-images/large/styles/V30BLRNMP0O/1567571858049/1.jpg",
+        },
+
+
+        // BB & CC CREAM ============================================
+
+        {
+            brand:"SHISEIDO",
+            name:"Perfect Hydrating BB Cream SPF 30",
+            price:"2400",
+            currency:"₹",
+            productID:"bb_cc_cream1",
+            catogery:"bb_cc_cream",
+            img:"https://cdn13.nnnow.com/web-images/large/styles/PXKCBZ1AAQ5/1495792112766/1.jpg",
+        },
+
+        {
+            brand:"FOREST ESSENTIALS",
+            name:"Som Rasa Silk Skin Tint - Chandan",
+            price:"2750",
+            currency:"₹",
+            productID:"bb_cc_cream2",
+            catogery:"bb_cc_cream",
+            img:"https://cdn09.nnnow.com/web-images/large/styles/G52010XWEVU/1660795165588/1.jpg",
+        },
+
+        {
+            brand:"CLINIQUE",
+            name:"Clinique ID™ With Dramatically Different™ Moisturizing BB-Gel",
+            price:"3100",
+            currency:"₹",
+            productID:"bb_cc_cream3",
+            catogery:"bb_cc_cream",
+            img:"https://cdn09.nnnow.com/web-images/large/styles/DJA1WA697WV/1585307687501/1.jpg",
+        },
+
+        {
+            brand:"SMASHBOX",
+            name:"Halo Healthy Glow Tinted Moisturizer Broad Spectrum SPF 25",
+            price:"2990",
+            currency:"₹",
+            productID:"bb_cc_cream4",
+            catogery:"bb_cc_cream",
+            img:"https://cdn13.nnnow.com/web-images/medium/styles/JIDP3LQWU3N/1615885957879/1.jpg",
+        },
+
+        {
+            brand:"GIVENCHY",
+            name:"Skin Perfecto Compact Cream SPF15",
+            price:"5750",
+            currency:"₹",
+            productID:"bb_cc_cream5",
+            catogery:"bb_cc_cream",
+            img:"https://cdn05.nnnow.com/web-images/large/styles/Q0DVQUFGHK3/1665569994869/1.jpg",
+        },
+
+        // Concealer ==================================== 
+
+        {
+            brand:"HUDA BEAUTY",
+            name:"Overachiever Concealer - 06G Nougat",
+            price:"1250",
+            currency:"₹",
+            productID:"Concealer1",
+            catogery:"concealer",
+            img:"https://cdn08.nnnow.com/web-images/large/styles/1IBV731R6TS/1567571357715/1.jpg",
+        },
+
+        {
+            brand:"SEPHORA COLLECTION",
+            name:"Best Skin Ever High Coverage Concealer - T33",
+            price:"1500",
+            currency:"₹",
+            productID:"Concealer2",
+            catogery:"concealer",
+            img:"https://cdn05.nnnow.com/web-images/large/styles/BO40BZNNC6G/1617723263013/1.jpg",
+        },
+
+        {
+            brand:"SEPHORA COLLECTION",
+            name:"Color Corrector - Peach",
+            price:"950",
+            currency:"₹",
+            productID:"Concealer3",
+            catogery:"concealer",
+            img:"https://cdn07.nnnow.com/web-images/large/styles/UTF2LFWTJJ8/1555306181480/1.jpg",
+        },
+
+        {
+            brand:"SEPHORA COLLECTION",
+            name:"Best Skin Ever High Coverage Concealer - T36",
+            price:"1500",
+            currency:"₹",
+            productID:"Concealer4",
+            catogery:"concealer",
+            img:"https://cdn14.nnnow.com/web-images/large/styles/EEN9RHPTQPW/1617724499551/1.jpg",
+        },
+
+        {
+            brand:"SEPHORA COLLECTION",
+            name:"Bright Future - Smoothing & Brightening Concealer - 06",
+            price:"650",
+            currency:"₹",
+            productID:"Concealer5",
+            catogery:"concealer",
+            img:"https://cdn19.nnnow.com/web-images/large/styles/K3YUB61Z1ZE/1555306652266/1.jpg",
+        },
+
+
+
+
+        
+    ]
+</script>
+
+<script>
+    let container=document.getElementById("container");
+    let filter=document.getElementById("filter");
+    let cartLS=JSON.parse(localStorage.getItem("cart-page")) || [];
+     
+    function Display(data){
+        container.innerHTML=null;
+        data.forEach(function(ele){
+             let product=document.createElement("div");
+             product.setAttribute("class","each");
+             let img=document.createElement("img");
+             img.src = ele.img;
+
+             let name= document.createElement("h1");
+             name.textContent = ele.name;
+            
+             let newdiv=document.createElement("div");
+             newdiv.setAttribute("class","price_mod");
+
+             let productcontain=document.createElement("div");
+             productcontain.setAttribute("class","product_contain");
+
+
+             let currency=document.createElement("h3");
+             currency.textContent=ele.currency;           
+             
+
+             let price=document.createElement("h3");
+             price.textContent=ele.price;
+             
+             newdiv.append(currency,price);
+
+             let catogery=document.createElement("p");
+             catogery.textContent=ele.catogery;
+
+             let brand=document.createElement("h2");
+             brand.textContent=ele.brand;
+
+             productcontain.append(brand,name,newdiv)
+
+             let addimg = document.createElement("img")
+             addimg.setAttribute("src","images/gift-bag.png", "ADD TO CART")
+             addimg.setAttribute("class", "bag")
+
+             let addimgheart =document.createElement("img");
+             addimgheart.setAttribute("src","images/heart.png")
+
+             let cart= document.createElement("button");
+             cart.setAttribute("class","cartbtn")
+             cart.append(addimg);
+             cart.addEventListener("click", function(){
+                Addtocart(ele);
+
+             })
+
+
+             product.append(img,cart,productcontain);
+
+             container.append(product);
+        })
+            
+        
+        
+    }
+    Display(product_data)
+
+    filter.addEventListener("change",function(){
+        if(filter.value===""){
+            Display(product_data);
+        }else{
+        let filtered=product_data.filter(function(ele){
+           return ele.catogery===filter.value;
+        })
+
+        Display(filtered);
+        } 
+    })
+
+    function Addtocart(product){
+        let iscardAdded=false;
+        for (let i=0;i<cartLS.length;i++){
+            if(cartLS[i].productID===product.productID){
+                alert("Product Already in The Cart")
+                iscardAdded=true;
+                break;
+            }
+        }
+        if(iscardAdded===false){
+        cartLS.push((product));
+        alert("Product added succesfully");
+        localStorage.setItem("cart-page",JSON.stringify(cartLS));
+        }
+
+    }
+
+     
+
+
+</script>
+
+
 </html>
