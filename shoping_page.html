@@ -215,27 +215,59 @@ td:hover{
 
 
 
+    .main{
+        display: flex;
+    }
 
+    #filter{
+        margin-top: 10px;
+        margin-left: 20px;
+        position: sticky;
+        font-family: 'Play', sans-serif;
+        font-size: 25px;
+        padding: 5px 10px;
+        width: 70%;
+        height: 45px;
+    }
 
     #container{
         display: grid;
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(3,1fr);
         justify-content: space-between;
+        width: 100%;
     }
 
     .each{
         height: 80vh;
         width: 90%;
         margin: 30px auto;
+
     }
     
-    img{
+    .each>img{
         width: 300px;
+        position: absolute;
+        
+        
     }
+
+    .bgimg{
+        width: 300px;
+        position: relative;
+        visibility: hidden;
+    }
+
+    .bgimg:hover{
+        visibility: visible;
+    }
+
+    
+
+    
 
     .product_contain{
         position: relative;
-        top: -41%;
+        top: 40%;
     }
 
     .product_contain h1{
@@ -271,28 +303,38 @@ td:hover{
 
     .cartbtn{
         position: relative;
+        display: flex;
         left: 50%;
         height: 40%;
         bottom: 0%;
         border: none;
         transition: 0.05s;
         width: 100%;
-        top: -41%;
+        top: 35%;
         background-color: transparent;
         transform: translateX(-50%);
         z-index: 9999;
     }
 
+   
+
     .cartbtn:hover{
         
         bottom: 20%;
 	    background: rgba(91, 209, 215);
+        display: flex;
     }
 
-    .cartbtn:hover img{
+    .cartbtn:hover img:nth-child(1){
         bottom: 49%;
 	    opacity: 1;
-        
+        margin-left: -50px;
+
+    }
+    .cartbtn:hover img:nth-child(2){
+        bottom: 49%;
+	    opacity: 1;
+        margin-left: 50px;
 
     }
     .cartbtn>img{
@@ -306,6 +348,27 @@ td:hover{
 	   opacity: 0;
 	   transition: 0.5s;
         
+    }
+
+    .bgimg{
+        width: 300px;
+        
+    }
+
+    option {
+        width: 60%;
+        height: 50px;
+    }
+    .filter_main{
+        border-right: 1px solid rgb(59, 53, 53) ;
+        width: 40%;
+        position: -webkit-sticky;
+    }
+
+    .filter_main>h1{
+        margin-left: 20px;
+        margin-top: 50px;
+        font-family: 'Play', sans-serif;
     }
 
     
@@ -327,7 +390,7 @@ td:hover{
             <div class="vr"></div>
             <div class="apps"><a href="store_locator.html"> <i class="fa-solid fa-box"></i>  <h3>Track order</h3> </a> </div>
             <div class="vr"></div>
-            <div class="apps"><a href="store_locator.html"> <i class="fa-solid fa-martini-glass"></i>  <h3>Loyalty</h3> </a> </div>
+            <div class="apps"><a href="shoping_page.html"> <i class="fa-solid fa-martini-glass"></i>  <h3>Loyalty</h3> </a> </div>
             
 
             </div>
@@ -686,19 +749,29 @@ td:hover{
     
 
 
-
+    <div class="main">
     <!-- FILTER -->
+
+    <div class="filter_main">
+        <h1>Filter By Category</h1>
     <select  id="filter">
+
+        
         <option value="">Select Catogery</option>
         <option value="Foundation">Foundation</option>
         <option value="bb_cc_cream">BB & CC Cream</option>
-        <option value="concealer">concealer</option>
+        <option value="concealer">Concealer</option>
+        <option value="face_primer">Face Primer</option>
 
     </select>
 
+    </div>
+
     <!-- CONTAINER -->
+    
     <div id="container">
 
+    </div>
     </div>
     
 </body>
@@ -707,27 +780,29 @@ td:hover{
     let product_data=[
         {
             brand:"HUDA BEAUTY",
-            name:"#FauxFilter Skin Finish Buildable Coverage Foundation Stick",
+            name:"FauxFilter Skin Finish Buildable Coverage Foundation Stick",
             price:"1625",
             currency:"₹",
             productID:"Foundation1",
             catogery:"Foundation",
             img:"https://cdn03.nnnow.com/web-images/large/styles/V6IA0GDPDAD/1609232297994/1.jpg",
+            img1:"images/person1.jpg",
         },
 
         {
             brand:"HUDA BEAUTY",
-            name:"#Faux Filter Luminous Matte Full Coverage Liquid Foundation - 110N Angel Food",
+            name:"Faux Filter Luminous Matte Full Coverage Liquid Foundation - 110N Angel Food",
             price:"2640",
             currency:"₹",
             productID:"Foundation2",
             catogery:"Foundation",
             img:"https://cdn01.nnnow.com/web-images/large/styles/85JV0IBOU8B/1631790324298/1.jpg",
+            img1:"images/person1.jpg",
         },
 
         {
             brand:"HUDA BEAUTY",
-            name:"#Faux Filter Luminous Matte Full Coverage Liquid Foundation - 405N Biscotti",
+            name:"Faux Filter Luminous Matte Full Coverage Liquid Foundation - 405N Biscotti",
             price:"1980",
             currency:"₹",
             productID:"Foundation3",
@@ -743,6 +818,46 @@ td:hover{
             productID:"Foundation4",
             catogery:"Foundation",
             img:"https://cdn15.nnnow.com/web-images/large/styles/V30BLRNMP0O/1567571858049/1.jpg",
+        },
+
+        {
+            brand:"SEPHORA COLLECTION",
+            name:"Glow Perfection Foundation - Honey",
+            price:"1352",
+            currency:"₹",
+            productID:"Foundation5",
+            catogery:"Foundation",
+            img:"https://cdn15.nnnow.com/web-images/large/styles/YOQV85Y8P5Y/1566802042002/1.jpg",
+        },
+
+        {
+            brand:"HUDA BEAUTY",
+            name:"GloWish By Huda Beauty Multidew Skin Tint - 05 Medium",
+            price:"2275",
+            currency:"₹",
+            productID:"Foundation6",
+            catogery:"Foundation",
+            img:"https://cdn09.nnnow.com/web-images/large/styles/PAHGD0HY3F1/1631786805126/1.jpg",
+        },
+
+        {
+            brand:"CLINIQUE",
+            name:"Beyond Perfecting™ Foundation + Concealer- CN 10 Alabaster",
+            price:"3500",
+            currency:"₹",
+            productID:"Foundation7",
+            catogery:"Foundation",
+            img:"https://cdn15.nnnow.com/web-images/large/styles/1VVC2Y6NQ33/1495800132952/1.jpg",
+        },
+
+        {
+            brand:"SEPHORA COLLECTION",
+            name:"Care Foundation - 10 N Neutral Light",
+            price:"1800",
+            currency:"₹",
+            productID:"Foundation8",
+            catogery:"Foundation",
+            img:"https://cdn03.nnnow.com/web-images/medium/styles/GQ496N8OBXA/1605172428541/1.jpg",
         },
 
 
@@ -798,6 +913,16 @@ td:hover{
             img:"https://cdn05.nnnow.com/web-images/large/styles/Q0DVQUFGHK3/1665569994869/1.jpg",
         },
 
+        {
+            brand:"GIVENCHY",
+            name:"Skin Ressource Velvet Cream",
+            price:"6500",
+            currency:"₹",
+            productID:"bb_cc_cream6",
+            catogery:"bb_cc_cream",
+            img:"https://cdn01.nnnow.com/web-images/medium/styles/X34N688PEYY/1665571235077/1.jpg",
+        },
+
         // Concealer ==================================== 
 
         {
@@ -808,6 +933,7 @@ td:hover{
             productID:"Concealer1",
             catogery:"concealer",
             img:"https://cdn08.nnnow.com/web-images/large/styles/1IBV731R6TS/1567571357715/1.jpg",
+            img1:"img/person1.png"
         },
 
         {
@@ -850,6 +976,160 @@ td:hover{
             img:"https://cdn19.nnnow.com/web-images/large/styles/K3YUB61Z1ZE/1555306652266/1.jpg",
         },
 
+        {
+            brand:"PIXI",
+            name:"Pat Away Concealing Base - Caramel",
+            price:"1227",
+            currency:"₹",
+            productID:"Concealer6",
+            catogery:"concealer",
+            img:"https://cdn01.nnnow.com/web-images/medium/styles/2L1R05DCMPW/1585829779041/1.jpg",
+        },
+
+        {
+            brand:"BENEFIT COSMETICS",
+            name:"Boi-Ing Cakeless Concealer - Shade 8.25 Loves It",
+            price:"2050",
+            currency:"₹",
+            productID:"Concealer7",
+            catogery:"concealer",
+            img:"https://cdn04.nnnow.com/web-images/medium/styles/8A5RMAVRFOV/1647924924092/1.jpg",
+        },
+
+        {
+            brand:"SEPHORA COLLECTION",
+            name:"Clear & Cover Corrector - 46 Pecan",
+            price:"1300",
+            currency:"₹",
+            productID:"Concealer8",
+            catogery:"concealer",
+            img:"https://cdn05.nnnow.com/web-images/medium/styles/Q9NF4ZN8U9D/1617723972848/1.jpg",
+        },
+
+        {
+            brand:"SHISEIDO",
+            name:"Sheer Eye Zone Corrector - Very Light - 101",
+            price:"1500",
+            currency:"₹",
+            productID:"Concealer9",
+            catogery:"concealer",
+            img:"https://cdn16.nnnow.com/web-images/large/styles/LWPI8YL9IEW/1600858533343/1.jpg",
+        },
+
+        {
+            brand:"HUDA BEAUTY",
+            name:"Fauxfilter Luminous Matte Liquid Concealer - Vanilla Swirl 3.1",
+            price:"1500",
+            currency:"₹",
+            productID:"Concealer10",
+            catogery:"concealer",
+            img:"https://cdn17.nnnow.com/web-images/medium/styles/TLK2YXHR1GM/1653300343846/1.jpg",
+        },
+
+        {
+            brand:"HUDA BEAUTY",
+            name:"Conceal And Blend Complexion Face Brush",
+            price:"1400",
+            currency:"₹",
+            productID:"Concealer11",
+            catogery:"concealer",
+            img:"https://cdn11.nnnow.com/web-images/large/styles/NX9R7F52F7E/1653300326331/1.jpg",
+        },
+
+        {
+            brand:"PIXI",
+            name:"Correction Concentrate - Brightening Peach",
+            price:"952",
+            currency:"₹",
+            productID:"Concealer12",
+            catogery:"concealer",
+            img:"https://cdn06.nnnow.com/web-images/large/styles/49DEKADYV67/1585829779043/1.jpg",
+        },
+
+        // FACE PRIMER 
+
+        {
+            brand:"BENEFIT COSMETICS",
+            name:"The POREfessional Face Primer",
+            price:"3300",
+            currency:"₹",
+            productID:"faceprimer1",
+            catogery:"face_primer",
+            img:"https://cdn19.nnnow.com/web-images/medium/styles/2PXZRRLJAKQ/1605088422828/1.jpg",
+        },
+
+        {
+            brand:"HUDA BEAUTY",
+            name:"Water Jelly Hydrating Face Primer Mini",
+            price:"990",
+            currency:"₹",
+            productID:"faceprimer2",
+            catogery:"face_primer",
+            img:"https://cdn03.nnnow.com/web-images/medium/styles/KH4D4EYV499/1653300487894/1.jpg",
+        },
+
+
+        {
+            brand:"SEPHORA COLLECTION",
+            name:"Beauty Amplifier Smoothing Primer",
+            price:"1320",
+            currency:"₹",
+            productID:"faceprimer3",
+            catogery:"face_primer",
+            img:"https://cdn05.nnnow.com/web-images/medium/styles/V21Z2LOB7HR/1533204761626/1.jpg",
+        },
+
+        {
+            brand:"BENEFIT COSMETICS",
+            name:"That Gal Brightening Face Primer",
+            price:"2400",
+            currency:"₹",
+            productID:"faceprimer4",
+            catogery:"face_primer",
+            img:"https://cdn05.nnnow.com/web-images/medium/styles/FL7VJ7JU8DD/1641795259131/1.jpg",
+        },
+
+        {
+            brand:"STILA",
+            name:"One Step Correct Skin Tone Correcting & Brightening Primer - Kitten",
+            price:"3300",
+            currency:"₹",
+            productID:"faceprimer5",
+            catogery:"face_primer",
+            img:"https://cdn08.nnnow.com/web-images/medium/styles/OXQIOQGMIZK/1653470822416/1.jpg",
+        },
+
+        {
+            brand:"PIXI",
+            name:"Flawless & Poreless",
+            price:"1744",
+            currency:"₹",
+            productID:"faceprimer6",
+            catogery:"face_primer",
+            img:"https://cdn10.nnnow.com/web-images/medium/styles/ZQOQ5TQZJO4/1585829779054/1.jpg",
+        },
+
+        {
+            brand:"NUDESTIX",
+            name:"Nudies Tinted Blur Stick - Deep 9",
+            price:"2950",
+            currency:"₹",
+            productID:"faceprimer7",
+            catogery:"face_primer",
+            img:"https://cdn01.nnnow.com/web-images/medium/styles/20CEF6279LC/1660043619497/1.jpg",
+        },
+
+        {
+            brand:"CLINIQUE",
+            name:"Superprimer™ - Universal Face Primer",
+            price:"3550",
+            currency:"₹",
+            productID:"faceprimer8",
+            catogery:"face_primer",
+            img:"https://cdn16.nnnow.com/web-images/medium/styles/8RKWKC0929P/1593757553963/1.jpg",
+        },
+
+
 
 
 
@@ -869,6 +1149,10 @@ td:hover{
              product.setAttribute("class","each");
              let img=document.createElement("img");
              img.src = ele.img;
+
+             let img1=document.createElement("img");
+             img1.src = ele.img1;
+             img1.setAttribute("class","bgimg");
 
              let name= document.createElement("h1");
              name.textContent = ele.name;
@@ -899,21 +1183,24 @@ td:hover{
 
              let addimg = document.createElement("img")
              addimg.setAttribute("src","images/gift-bag.png", "ADD TO CART")
-             addimg.setAttribute("class", "bag")
+             addimg.setAttribute("class", "bag");
+
+             
+
 
              let addimgheart =document.createElement("img");
              addimgheart.setAttribute("src","images/heart.png")
 
              let cart= document.createElement("button");
              cart.setAttribute("class","cartbtn")
-             cart.append(addimg);
+             cart.append(addimg,addimgheart);
              cart.addEventListener("click", function(){
                 Addtocart(ele);
 
              })
 
 
-             product.append(img,cart,productcontain);
+             product.append(img,img1,cart,productcontain);
 
              container.append(product);
         })
