@@ -140,6 +140,10 @@ footer{
     font-weight: 600;
 
 }
+.nav_links>ul>li>a{
+    text-decoration: none;
+    color: black;
+}
 
 #pop {
     position: absolute;
