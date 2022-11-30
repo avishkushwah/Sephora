@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: 100%;
+}
 *{
     margin: 0%;
     padding: 0%;
@@ -437,7 +440,15 @@ video{
     color: #222;
     text-decoration: none;
     font-weight: 600;
+    scroll-behavior: smooth;
 }
+
+
+#top{
+    scroll-behavior: smooth;
+}
+
+
 
 
 

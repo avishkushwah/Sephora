@@ -1,0 +1,243 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+/* HEADER */
+html {
+    scroll-behavior: 100%;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+footer {
+    width: 100%;
+    border-bottom: 1px solid gray;
+}
+
+.first_footer {
+    background-color: #f3f3f3;
+}
+
+.first_footer_main {
+    width: 93%;
+    margin: auto;
+    display: flex;
+}
+
+.img img {
+    width: 110px;
+}
+
+.vr {
+    width: 2px;
+    height: 20px;
+    background-color: rgb(187, 178, 178);
+    margin: 14px 20px;
+}
+
+.apps>a {
+    display: flex;
+    padding: 15px 5px;
+    text-decoration: none;
+    font-family: 'Play', sans-serif;
+}
+
+.apps>a>i {
+    color: rgb(226, 68, 94);
+}
+
+.apps>a>h3 {
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Play', sans-serif;
+    margin-left: 10px;
+    margin-top: -2px;
+    color: rgb(87, 76, 76);
+}
+
+.stars {
+    padding: 12px 10px;
+}
+
+.stars>i {
+    transform: rotate(-45deg);
+    font-size: 14px;
+}
+
+#purple_star {
+    color: purple;
+}
+
+#yellow_star {
+    color: yellow;
+}
+
+#pink_star {
+    color: #EA047E;
+}
+
+.head_center {
+    font-family: 'Play', sans-serif;
+    padding: 10px 5px;
+    width: 400px;
+    text-align: center;
+}
+
+.footer_mid {
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
+.search_bar {
+    border-bottom: 1px solid gray;
+    padding-top: 40px;
+    padding-right: 20px;
+    height: 25px;
+    width: 350px;
+
+}
+
+.search_bar>i {
+    color: #EA047E;
+    padding: 0px 10px;
+    font-size: 18px;
+
+}
+
+.search_bar>input {
+    font-size: 18px;
+    border: none;
+    outline: none;
+}
+
+.logo {
+    padding: 0px 80px;
+}
+
+.logo>img {
+    width: 250px;
+}
+
+.featurs {
+    display: flex;
+    padding-left: 200px;
+    padding-top: 30px;
+}
+
+/* brand we provide */
+
+.swiper {
+    width: 100%;
+    height: 100vh;
+  }
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+
+
+  /* MENS CAOGERY */
+.men_main{
+    display: flex;
+
+}
+
+.catogorey{
+    width: 60%;
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.catogorey_item{
+    width: 200px ;
+    height: 200px ;
+    border-radius: 20px;
+    box-shadow: 5px 5px 50px gray;
+}
+.catogorey_item:hover{
+    box-shadow: 5px 5px 50px #FE9738;
+}
+.catogorey_item>a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.catogorey_item>a>img{
+    width: 150px;
+    margin: 10px 25px;
+}
+
+.catogorey_item>a>img>h3{
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+.floating {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+.floating img{
+    width: 90%;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        transform: translate(0, -0px);
+    }
+}
