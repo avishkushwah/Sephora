@@ -5,22 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
+    <link rel="stylesheet" href="cart.css">
 </head>
-<style>
-    *{
-        margin: 0%;
-        padding: 0%;
-    }
 
-    #container{
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-    }
-    
-    img{
-        width: 200px;
-    }
-</style>
 <body>
     <h1>TOTAL CARD VALUE:- <span id="total-price">0</span></h1>
     <div id="container">
@@ -40,6 +27,12 @@
         data.forEach(function(ele,index){
              total+=Number(ele.price);
              let product=document.createElement("div");
+             let item=document.createElement('div');
+             item.setAttribute("class", "item");~~
+
+             let item1=document.createElement('div');
+             item.setAttribute("class", "item1");
+
              let img=document.createElement("img");
              img.src = ele.img;
 
@@ -62,10 +55,12 @@
                 Deletcart(index);
             })
 
+            item.append(img);
+            item1.append(brand,name,price,deletBtn);
+             product.append(  );
+             
 
-             product.append(img,brand, name, price, catogery, deletBtn);
-
-             container.append(product);
+             container.append(item,item1);
         })
             
         totalPrice.textContent=total;
