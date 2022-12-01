@@ -1,0 +1,26 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+#container{
+   
+    
+
+}
+
+img{
+    width: 200px;
+}
+.item{
+    display: flex;
+}
+.item1{
+    background-color: aqua;
+    
+
+}
+
+.h2{
+    display: block;
+}
